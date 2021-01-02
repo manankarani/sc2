@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.img-thumbnail {
+  border-radius: 20px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.login-btn {
+  background-color: #0ba055;
+  border-radius: 20px;
+  margin: 58vh 20px 20px 20px;
+  text-align: center;
+  position: relative;
+  /*top: 90%;
+  -ms-transform: translateY(-90%);
+  transform: translateY(-90%);*/
+  padding: 10px 40px !important;
+}
+
+.login-btn:hover {
+  background-color: #0ba055 !important;
+  box-shadow: 0 0 5px #0ba055, 0 0 5px #0ba055, 0 0 10px #0ba055,
+    0 0 15px #0ba055;
+}
+
+.signup-btn {
+  background-color: #b67c00;
+  border-radius: 20px;
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  padding: 10px 30px !important;
+}
+
+.signup-btn:hover {
+  background-color: #b67c00 !important;
+  box-shadow: 0 0 5px #b67c00, 0 0 5px #b67c00, 0 0 10px #b67c00,
+    0 0 15px #b67c00;
+}
+
+.flex-page {
+  display: flex;
+  height: 91vh;
+  overflow: hidden;
+}
+
+.side-nav {
+  display: flex;
+  background: #0ba055;
+  padding-top: 1.5rem;
+}
+
+.side-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav ul li a {
+  padding: 0.75rem 2rem;
+  color: #ecf0f1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+}
+.side-nav ul li a:hover {
+  background: #0ba055;
+}
+.side-nav ul li a:focus {
+  background: #2c3e50;
+}
+
+.login-btn {
+  background: #0ba055;
+}
+
+.overall {
+  display: block;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.square {
+  box-shadow: 2px 2px 5px #252525;
+  height: 200px;
+  width: 200px;
+  margin: 1rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.square:hover {
+  transform: scale(1.15);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 5px rgba(255, 255, 255, 0.4),
+    0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/*# sourceMappingURL=indexstyle.css.map */

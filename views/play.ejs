@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/chessboard-1.0.0.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="js/chessboard-1.0.0.min.js"></script>
+    <script defer src="js/chess.js/chess.js"></script>
+    <script defer src="js/play.js"></script>
+  </head>
+  <body>
+    <nav class="p-2 px-5" style="background: rgba(0, 0, 0, 0.2)">
+      <div class="text-light" style="font-size: 30px">
+        <img src="/img/logo.png" width="50" height="50" alt="" />
+        Say Chess <% if(isLoggedIn) {%>
+        <div style="float: right; text-transform: capitalize">
+          Hi <%= name %>
+        </div>
+        <% } %>
+      </div>
+    </nav>
+    <div class="flex-page">
+        <div class="side-nav" style="background: rgba(0,0,0,0.2);">
+            <ul>
+                <li><a href="{{ url_for('comvscom') }}">Com vs Com</a></li>
+                <li><a href="{{ url_for('playcom') }}">Play Com</a></li>
+                <% if(!isLoggedIn) {%>
+
+                    <li><a href="/login" class="login-btn">Login</a></li>
+                    <li><a href="/register" class="signup-btn">Register</a></li>
+                    <% } %>
+            </ul>
+        </div>
+        <div class="container">  
+            <h1 class="text-center py-2 font-weight-light text-light">Play Online</h1>
+            <div class="loading-container">
+                <div class="loading" style="margin-top: 28vh;"></div>
+                <div id="loading-text">Waiting for a Player</div>
+            </div>
+			<div class="row">
+				<div class="col-md-6 mb-5 text-center">
+					<div class="board" id="myBoard"></div>
+					<div class="center overlay"></div>
+					<div class="center">
+						<button class="btn btn-block play">Play</button>
+					</div>
+				</div>
+				<div class="col-md-4 jumbotron text-light"
+					style="background-color: rgba(0,0,0,0.2); margin-left: 144px;">
+					<div id="status" class="font-weight-bold"></div>
+					<label>PGN:</label>
+					<div id="pgn" class="font-weight-light font-italic"></div>
+					<div class="corner">
+						<button class="btn btn-block stop" style="visibility: hidden;">Stop</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+  </body>
+</html>
